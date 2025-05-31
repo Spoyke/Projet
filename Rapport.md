@@ -86,5 +86,4 @@ Cette fonction gère le moteur via la PWM :
 - Cela évite que l’utilisateur n’active le moteur par hasard lors de la rotation du codex.
 - Le PWM est modifié via `__HAL_TIM_SET_COMPARE()` en fonction de l’état validé.
 
-! expliquer le calcul des valeurs de la PWM
-
+Le rôle des moteurs dans l'énigme étant de simplement ouvrir ou fermé le prix. Ces derniers ne se situeront qu'au deux extrêmes possibles (0 ou 180°). C'est pourquoi, avec `__HAL_TIM_SET_COMPARE()`, nous paramétrons le signal pour qu'il soit sur un des deux extrêmes, c'est-à-dire une largeur de crénau de 10ms ou de 20ms.
