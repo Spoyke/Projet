@@ -87,3 +87,5 @@ Cette fonction gère le moteur via la PWM :
 - Le PWM est modifié via `__HAL_TIM_SET_COMPARE()` en fonction de l’état validé.
 
 Le rôle des moteurs dans l'énigme étant de simplement ouvrir ou fermé le prix. Ces derniers ne se situeront qu'au deux extrêmes possibles (0 ou 180°). C'est pourquoi, avec `__HAL_TIM_SET_COMPARE()`, nous paramétrons le signal pour qu'il soit sur un des deux extrêmes, c'est-à-dire une largeur de crénau de 10ms ou de 20ms.
+
+NB : A savoir que lorsque l'on flash le code sur le microprocesseur, il faut ensuite couper l'alimentation de la carte avant de la remettre pour que le code prenne effet.
