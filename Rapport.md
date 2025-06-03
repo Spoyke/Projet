@@ -155,6 +155,8 @@ Le **codex** est le cœur de notre énigme : il est constitué de **six disques 
 
 Lorsque le bon mot est aligné, la LED éclaire le phototransistor, ce qui déclenche l’ouverture de la trappe contenant la **clé**.
 
+<img src="Codex.png" /> 
+
 ## 3.4 Mécanisme d’ouverture motorisé
 
 L’ouverture de la trappe se fait via un **servomoteur**, activé dès que le codex valide la solution. Pour convertir le mouvement du servomoteur en une action mécanique fiable, nous avons conçu un **système d’engrenages** également imprimé en 3D.
@@ -165,6 +167,8 @@ Ce mécanisme permet :
 - Une **compatibilité mécanique totale** avec les autres composants imprimés.
 
 Bien que nous ne disposions pas de logiciels de simulation avancés (comme SolidWorks) pour tester virtuellement ce système, nous avons pu valider son fonctionnement par des essais physiques et des ajustements progressifs.
+
+<img src="systeme.png" /> 
 
 ## 3.5 Boîte en bois découpée au laser
 
