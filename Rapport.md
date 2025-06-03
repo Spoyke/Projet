@@ -89,3 +89,44 @@ Cette fonction gère le moteur via la PWM :
 Le rôle des moteurs dans l'énigme étant de simplement ouvrir ou fermé le prix. Ces derniers ne se situeront qu'au deux extrêmes possibles (0 ou 180°). C'est pourquoi, avec `__HAL_TIM_SET_COMPARE()`, nous paramétrons le signal pour qu'il soit sur un des deux extrêmes, c'est-à-dire une largeur de crénau de 10ms ou de 20ms.
 
 NB : A savoir que lorsque l'on flash le code sur le microprocesseur, il faut ensuite couper l'alimentation de la carte avant de la remettre pour que le code prenne effet.
+
+# Concernant le PCB
+
+## 1. Enjeux du PCB
+
+Pour le projet, nous avons besoin de créer un PCB qui respecte certaines conditions, comme le fait que nous prévoyons d’utiliser deux faces du cube et que nous sommes dans une démarche écologique, donc sans gaspillage.
+Nous allons également avoir besoin d’utiliser des composants sans forcément les relier directement au PCB.
+
+## 2. Disposition sur le PCB
+
+### Pour la composition du PCB, nous avons besoin de plusieurs éléments :
+
+- **Le microprocesseur**  
+   Nous avons décidé d’utiliser le `STM32L412KBT6`, car il possède suffisamment de pins pour notre projet et nous permet de rester sur la gamme STM. Il sera accompagné de son connecteur afin de pouvoir téléverser le code.
+
+- **Les lasers**  
+   Nous aurons besoin d’une partie dédiée aux lasers et à leurs récepteurs (utilisés dans la deuxième énigme). Le but de cette énigme est d’utiliser un jeu de miroirs pour rediriger les faisceaux vers leurs récepteurs, afin de résoudre l’énigme.
+
+- **Le régulateur de tension**  
+   Nous avons également besoin d’un régulateur de tension pour l’alimentation du PCB, nous utilisons un LDO, le `BU33SD5WG-TR`
+
+- **Une seconde PCB sera fixée sur une autre face pour le fonctionnement du codex.**  
+   Elle comprendra une LED (émetteur) qui, une fois le bon code trouvé sur notre codex, viendra éclairer un phototransistor (récepteur) en passant à travers de petits trous alignés dans les roues du codex. Il y aura également une LED qui affichera le code morse afin que l’utilisateur puisse le déchiffrer.
+
+- **Deux boutons**  
+   Un pour réinitialiser le code morse, et un autre pour réinitialiser le microcontrôleur (et donc les lasers également).
+   Ils seront en montage push-pull.
+
+- **Deux Servomoteurs**  
+   Le premier permettra l’ouverture de la trappe pour accéder à la clé après la résolution de nos énigmes.
+   Le second servira à ouvrir la boîte une fois toutes les énigmes résolues.
+   Il suffit qu’ils tournent à 180° pour permettre une ouverture optimale.
+
+- **Les clefs**  
+   Nous avons besoin d’un accès au 5V et au GND afin d’interconnecter les différentes clés entre elles.
+
+- **Infos importantes**  
+   Comme tous les composants ne sont pas directement connectés au PCB — car ils doivent être placés à différents endroits — nous utilisons des connecteurs à la place des composants pour faciliter leur déport.
+
+
+
