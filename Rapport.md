@@ -103,7 +103,7 @@ Nous allons également avoir besoin d’utiliser des composants sans forcément 
 
 - **Le microprocesseur**  
    Nous avons décidé d’utiliser le `STM32L412KBT6`, car il possède suffisamment de pins pour notre projet et nous permet de rester sur la gamme STM. Il sera accompagné de son connecteur afin de pouvoir téléverser le code.\
-  _Nous utiliserons un réseau de trois condensateurs — 4,7 µF, 100 nF, et 100 nF — pour découpler l’alimentation générale.
+  _Nous utiliserons un réseau de trois condensateurs, 4,7 µF, 100 nF, et 100 nF, pour découpler l’alimentation générale.
 Nous filtrerons également l’alimentation à l’aide d’un filtre LC, afin de la stabiliser. Ce filtre sera composé d’une inductance de 39 nH et de deux condensateurs de 1 µF et 10 nF, dans le but de filtrer les hautes fréquences et les parasites liés à la masse._
 
 - **Les lasers**  
@@ -131,7 +131,7 @@ Nous filtrerons également l’alimentation à l’aide d’un filtre LC, afin d
    Nous avons besoin d’un accès au 5V et au GND afin d’interconnecter les différentes clés entre elles.
 
 - **Infos importantes**  
-   Comme tous les composants ne sont pas directement connectés au PCB — car ils doivent être placés à différents endroits — nous utilisons des connecteurs à la place des composants pour faciliter leur déport.\
+   Comme tous les composants ne sont pas directement connectés au PCB, car ils doivent être placés à différents endroits, nous utilisons des connecteurs à la place des composants pour faciliter leur déport.\
   Des trous de fixation sont également prévus afin de pouvoir fixer nos PCB.
 
 <img src="PCB.png" /> 
