@@ -136,3 +136,43 @@ Nous filtrerons également l’alimentation à l’aide d’un filtre LC, afin d
 
 <img src="PCB.png" /> 
 
+# 3. Conception mécanique et assemblage
+
+## 3.1 Objectif de conception
+
+L’un des objectifs majeurs de notre projet était de rendre notre dispositif **totalement reproductible** sans nécessiter de machines industrielles. Pour cela, nous avons choisi de ne faire appel qu’à une **imprimante 3D**, aujourd’hui couramment disponible dans les établissements scolaires et chez les particuliers. Ce choix garantit une accessibilité maximale et facilite la réplicabilité du projet.
+
+## 3.2 Outils et logiciels utilisés
+
+La modélisation 3D a été réalisée à l’aide de **Tinkercad**, un outil simple et intuitif, parfaitement adapté pour concevoir des pièces rapidement, même sans expérience avancée en modélisation. Malgré ses limitations par rapport à des logiciels professionnels comme SolidWorks, Tinkercad s’est avéré suffisant pour notre projet.
+
+## 3.3 Le codex : un mécanisme d’énigme purement 3D
+
+Le **codex** est le cœur de notre énigme : il est constitué de **six disques rotatifs**, chacun comportant un **trou** positionné avec précision. Lorsque les disques sont alignés sur les bonnes lettres, les trous laissent passer la lumière d’une **LED émettrice** jusqu’à un **phototransistor récepteur**.
+
+- Le mot utilisé dans cette version du codex est **"cadena"** (sans "s", une petite omission volontairement conservée).
+- Chaque disque possède **26 crans**, correspondant aux **26 lettres de l’alphabet** .
+
+Lorsque le bon mot est aligné, la LED éclaire le phototransistor, ce qui déclenche l’ouverture de la trappe contenant la **clé**.
+
+## 3.4 Mécanisme d’ouverture motorisé
+
+L’ouverture de la trappe se fait via un **servomoteur**, activé dès que le codex valide la solution. Pour convertir le mouvement du servomoteur en une action mécanique fiable, nous avons conçu un **système d’engrenages** également imprimé en 3D.
+
+Ce mécanisme permet :
+- Une **transmission fiable** de l’effort moteur.
+- Une **ouverture douce** de la trappe.
+- Une **compatibilité mécanique totale** avec les autres composants imprimés.
+
+Bien que nous ne disposions pas de logiciels de simulation avancés (comme SolidWorks) pour tester virtuellement ce système, nous avons pu valider son fonctionnement par des essais physiques et des ajustements progressifs.
+
+## 3.5 Boîte en bois découpée au laser
+
+Pour l’enceinte du projet, nous avons opté pour une **boîte en bois**, réalisée par **découpe laser**. Ce choix offre une structure rigide, écologique, et facilement personnalisable.
+
+- Nous avons utilisé le site **MakerBox** pour générer automatiquement les plans de la boîte selon nos dimensions (ici, **30 × 30 cm**).
+- Les fichiers SVG générés ont été modifiés avec **Inkscape**, un logiciel libre de dessin vectoriel, afin de répondre aux besoins spécifiques de notre groupe et des autres équipes travaillant sur le projet.
+
+Grâce à cette approche, nous avons obtenu une boîte à la fois **fonctionnelle**, **esthétique** et **parfaitement adaptée** à notre structure interne.
+
+
