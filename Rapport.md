@@ -105,17 +105,19 @@ Nous allons également avoir besoin d’utiliser des composants sans forcément 
    Nous avons décidé d’utiliser le `STM32L412KBT6`, car il possède suffisamment de pins pour notre projet et nous permet de rester sur la gamme STM. Il sera accompagné de son connecteur afin de pouvoir téléverser le code.
 
 - **Les lasers**  
-   Nous aurons besoin d’une partie dédiée aux lasers et à leurs récepteurs (utilisés dans la deuxième énigme). Le but de cette énigme est d’utiliser un jeu de miroirs pour rediriger les faisceaux vers leurs récepteurs, afin de résoudre l’énigme.
+   Nous aurons besoin d’une partie dédiée aux lasers et à leurs récepteurs (utilisés dans la deuxième énigme). Le but de cette énigme est d’utiliser un jeu de miroirs pour rediriger les faisceaux vers leurs récepteurs, afin de résoudre l’énigme. _Les lasers utilisé sont des `VMA434` et on besoins simplement du résistance de 270 ohms sur le pin d'information._
 
 - **Le régulateur de tension**  
-   Nous avons également besoin d’un régulateur de tension pour l’alimentation du PCB, nous utilisons un LDO, le `BU33SD5WG-TR`
+   Nous avons également besoin d’un régulateur de tension pour l’alimentation du PCB, nous utilisons un LDO, le `BU33SD5WG-TR`.
+   _Nous relierons le GND et le Vout par un condensateur de 1 µF, de même pour le Vin et le GND. Le Vin sera alimenté en 5 V et le Vout délivrera du 3,3 V._
 
 - **Une seconde PCB sera fixée sur une autre face pour le fonctionnement du codex.**  
    Elle comprendra une LED (émetteur) qui, une fois le bon code trouvé sur notre codex, viendra éclairer un phototransistor (récepteur) en passant à travers de petits trous alignés dans les roues du codex. Il y aura également une LED qui affichera le code morse afin que l’utilisateur puisse le déchiffrer.
+  _Une résistance de 10 kΩ sera utilisée pour le phototransistor, ainsi que des résistances d’adaptation pour les LED : une de 580 Ω reliée à l’alimentation, et une autre de 420 Ω reliée au GND._
 
 - **Deux boutons**  
    Un pour réinitialiser le code morse, et un autre pour réinitialiser le microcontrôleur (et donc les lasers également).
-   Ils seront en montage push-pull.
+   Ils seront en montage push-pull, avec des resistance de 120 Ω.
 
 - **Deux Servomoteurs**  
    Le premier permettra l’ouverture de la trappe pour accéder à la clé après la résolution de nos énigmes.
@@ -128,5 +130,5 @@ Nous allons également avoir besoin d’utiliser des composants sans forcément 
 - **Infos importantes**  
    Comme tous les composants ne sont pas directement connectés au PCB — car ils doivent être placés à différents endroits — nous utilisons des connecteurs à la place des composants pour faciliter leur déport.
 
-
+<img src="PCB.png" /> 
 
