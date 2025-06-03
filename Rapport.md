@@ -179,4 +179,4 @@ Pour l’enceinte du projet, nous avons opté pour une **boîte en bois**, réal
 
 Grâce à cette approche, nous avons obtenu une boîte à la fois **fonctionnelle**, **esthétique** et **parfaitement adaptée** à notre structure interne.
 
-
+<img src="boite.png" /> 
