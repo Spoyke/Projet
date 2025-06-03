@@ -146,7 +146,7 @@ L’un des objectifs majeurs de notre projet était de rendre notre dispositif *
 
 La modélisation 3D a été réalisée à l’aide de **Tinkercad**, un outil simple et intuitif, parfaitement adapté pour concevoir des pièces rapidement, même sans expérience avancée en modélisation. Malgré ses limitations par rapport à des logiciels professionnels comme SolidWorks, Tinkercad s’est avéré suffisant pour notre projet.
 
-## 3.3 Le codex : un mécanisme d’énigme purement 3D
+## 3.3 Le codex
 
 Le **codex** est le cœur de notre énigme : il est constitué de **six disques rotatifs**, chacun comportant un **trou** positionné avec précision. Lorsque les disques sont alignés sur les bonnes lettres, les trous laissent passer la lumière d’une **LED émettrice** jusqu’à un **phototransistor récepteur**.
 
